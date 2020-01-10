@@ -95,6 +95,32 @@ VALUES
 /*!40000 ALTER TABLE `answers` ENABLE KEYS */;
 UNLOCK TABLES;
 
+# Export of table int answers
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `intAnswers`;
+
+CREATE TABLE `intAnswers` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `question_id` bigint(20) unsigned NOT NULL,
+  `answerNumber` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `isCorrect` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `answers_question_id_foreign` (`question_id`),
+  CONSTRAINT `answers_question_id_foreign` FOREIGN KEY (`question_id`) REFERENCES `questions` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `intAnswers` WRITE;
+/*!40000 ALTER TABLE `intAnswers` DISABLE KEYS */;
+
+INSERT INTO `intAnswers` (`id`, `question_id`, `answerText`, `isCorrect`, `created_at`, `updated_at`)
+VALUES
+	(16,9,'Bern',1,'2019-10-25 04:13:41','2019-10-25 04:13:41');
+
+/*!40000 ALTER TABLE `intAnswers` ENABLE KEYS */;
+UNLOCK TABLES;
 
 # Export of table migrations
 # ------------------------------------------------------------

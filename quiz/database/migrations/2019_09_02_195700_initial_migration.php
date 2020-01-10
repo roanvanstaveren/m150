@@ -45,6 +45,17 @@ class InitialMigration extends Migration
 
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
         });
+
+        Schema::create('intAnswers', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('question_id');
+            $table->int('answerInt');
+            $table->boolean('isCorrect');
+
+            $table->timestamps();
+
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+        });
     }
 
     /**
@@ -57,5 +68,6 @@ class InitialMigration extends Migration
         Schema::drop('quizzes');
         Schema::drop('questions');
         Schema::drop('answers');
+        Schema::drop('intAnswers');
     }
 }
