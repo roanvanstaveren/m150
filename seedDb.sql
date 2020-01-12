@@ -103,7 +103,7 @@ DROP TABLE IF EXISTS `intAnswers`;
 CREATE TABLE `intAnswers` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `question_id` bigint(20) unsigned NOT NULL,
-  `answerNumber` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answerNumber` bigint(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isCorrect` tinyint(1) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
