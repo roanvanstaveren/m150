@@ -7,7 +7,6 @@ import SignUp from "./components/Auth/SignUp";
 import QuizPlay from "./components/quiz/QuizPlay";
 import Logout from "./components/Auth/Logout";
 import Home from "./components/Home";
-import DemoComponent from "./components/DemoComponent";
 
 const routes = [
     {
@@ -64,10 +63,6 @@ const routes = [
             props.quizId = +props.quizId;
             return props;
         }
-    },
-    {
-        path: '/demo',
-        component: DemoComponent
     }
 ];
 
