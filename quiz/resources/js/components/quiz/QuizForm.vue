@@ -2,6 +2,18 @@
     <v-form v-model="validForm">
         <v-row>
             <v-col>
+                <v-combobox v-model="value.questionType"
+                            :items="questionTypes"
+                            lable="Question type"
+                            :disabled="disableFields"
+                            @change="$emit('input', value)"
+                            color="green"
+                            required>
+                </v-combobox>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col>
                 <v-text-field v-model="value.title"
                               label="Title of Quiz"
                               :disabled="disableFields"
@@ -35,6 +47,7 @@
         },
         data: () => ({
             validForm: false,
+            questionTypes: []
         }),
         watch: {
             validForm: function (newValidity) {

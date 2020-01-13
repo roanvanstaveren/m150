@@ -24,6 +24,15 @@
                     </v-list-item-content>
             </v-list-item>
 
+            <v-list-item to="/highscore">
+                    <v-list-itema-action>
+                        <v-icon>mdi-home</v-icon>
+                    </v-list-itema-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Highscore</v-list-item-title>
+                    </v-list-item-content>
+            </v-list-item>
+
         </v-list>
     </v-navigation-drawer>
 </template>

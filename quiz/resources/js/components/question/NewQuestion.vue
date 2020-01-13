@@ -29,20 +29,6 @@
                     <v-icon>mdi-delete</v-icon>
                 </v-btn>
             </v-col>
-        </v-row> 
-        <v-row v-for="(intAnswer, index) in intAnswers"
-               :key="index"
-               align="center">
-            <v-col cols="10">
-                <answer-form v-model="intAnswers[index]"
-                             @validation="(validity) => {onAnswerValidation(index, validity);}"/>
-            </v-col>
-            <v-col cols="2"
-                   class="text-center">
-                <v-btn icon @click="() => {deleteAnswer(index);}">
-                    <v-icon>mdi-delete</v-icon>
-                </v-btn>
-            </v-col>
         </v-row>
         <v-row>
             <v-col>
