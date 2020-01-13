@@ -24,8 +24,8 @@
     // Add default data for users: RoanVanStaveren & KevBru
     export default {
         data: () =>({
-            sort: 'All Time',
-            highscoreData: [
+            sort: 'Highscore',
+            quizscoreData: [
                 {
                     username: 'RoanVanStaveren',
                     score: '124'
@@ -55,6 +55,8 @@
                     score: '420'
                 }
             ],
+
+
             isLoading: true,
             hideHeader: true,
             loadingText: 'Loading... please wait',
