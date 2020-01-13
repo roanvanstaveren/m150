@@ -2547,6 +2547,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -6229,6 +6243,58 @@ var render = function() {
                       _vm.$set(_vm.answers, index, $$v)
                     },
                     expression: "answers[index]"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-col",
+              { staticClass: "text-center", attrs: { cols: "2" } },
+              [
+                _c(
+                  "v-btn",
+                  {
+                    attrs: { icon: "" },
+                    on: {
+                      click: function() {
+                        _vm.deleteAnswer(index)
+                      }
+                    }
+                  },
+                  [_c("v-icon", [_vm._v("mdi-delete")])],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.intAnswers, function(intAnswer, index) {
+        return _c(
+          "v-row",
+          { key: index, attrs: { align: "center" } },
+          [
+            _c(
+              "v-col",
+              { attrs: { cols: "10" } },
+              [
+                _c("answer-form", {
+                  on: {
+                    validation: function(validity) {
+                      _vm.onAnswerValidation(index, validity)
+                    }
+                  },
+                  model: {
+                    value: _vm.intAnswers[index],
+                    callback: function($$v) {
+                      _vm.$set(_vm.intAnswers, index, $$v)
+                    },
+                    expression: "intAnswers[index]"
                   }
                 })
               ],

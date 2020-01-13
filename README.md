@@ -273,4 +273,5 @@ In this section some links and references are listed. The listing is not conside
 Feedback on the application is very welcome! Just reach out to your teacher and/or the maintainer of this repository!
 
 
-TEst roan
+## Issues
+Whilst expanding this project we ran into several mistakes about testing the application. For example the VM didn't work at all. We even tried reinstalling all the required files. Everything was green and it compiled successfully, however we received a Server error: 500. 
