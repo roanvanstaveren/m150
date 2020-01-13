@@ -9,6 +9,7 @@ import Logout from "./components/Auth/Logout";
 import Home from "./components/Home";
 import QuizScores from "./components/MyAccount/QuizScores";
 
+
 const routes = [
     {
         path: '/',
