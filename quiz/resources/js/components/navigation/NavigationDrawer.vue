@@ -4,8 +4,10 @@
             @input="onInput"
             app
             clipped
-    >
+    >        
         <v-list dense>
+
+            <!-- Home Tab -->
             <v-list-item to="/">
                 <v-list-item-action>
                     <v-icon>mdi-home</v-icon>
@@ -15,6 +17,7 @@
                 </v-list-item-content>
             </v-list-item>
 
+            <!-- Quizzes Tab -->
             <v-list-item to="/quizzes">
                     <v-list-item-action>
                         <v-icon>mdi-home</v-icon>
@@ -24,12 +27,13 @@
                     </v-list-item-content>
             </v-list-item>
 
-            <v-list-item to="/highscore">
+            <!-- My Account Tab -->
+            <v-list-item to="/myAccount">
                     <v-list-itema-action>
                         <v-icon>mdi-home</v-icon>
                     </v-list-itema-action>
                     <v-list-item-content>
-                        <v-list-item-title>Highscore</v-list-item-title>
+                        <v-list-item-title>My Account</v-list-item-title>
                     </v-list-item-content>
             </v-list-item>
 

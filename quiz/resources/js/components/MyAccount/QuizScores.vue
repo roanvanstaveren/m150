@@ -1,65 +1,58 @@
+// Display Quiz Scores for player
+
 <template>
     <v-container>
+
             <v-row>
                 <v-col class="text-center">
-                    <p class="display-4">Highscore - <strong>{{sort}}</strong></p>
-                    <p class="font-italic font-weight-light">{{sort}} highscore</p>
+                    <p class="display-4">Quiz Scores - <strong>{{sort}}</strong></p>
+                    <p class="font-italic font-weight-light">{{sort}} quiz scores</p>
                 </v-col>
-            </v-row>  
+            </v-row>
+
             <v-row>
                 <v-col class="text-center">
-                    <v-data-table :hide-default-header="hideHeader" :headers='headers' :items="highscoreData" :loading="isLoading" :loading-text="loadingText" dense v-bind="highscoreData">
+                    <v-data-table :hide-default-header="hideHeader" :headers='headers' :items="quizscoreData" :loading="isLoading" :loading-text="loadingText" dense v-bind="quizscoreData">
                     </v-data-table>
-                </v-col>
-                
-            </v-row>          
+                </v-col>                
+            </v-row>
+
         </v-container>
 </template>
 
 <script>
+    // Add default data for users: RoanVanStaveren & KevBru
     export default {
         data: () =>({
             sort: 'All Time',
             highscoreData: [
                 {
-                    username: 'That boi',
+                    username: 'RoanVanStaveren',
+                    score: '124'
+                },
+                {
+                    username: 'KevBru',
+                    score: '234'
+                },
+                {
+                    username: 'RoanVanStaveren',
+                    score: '977'
+                },
+                {
+                    username: 'KevBru',
+                    score: '2100'
+                },
+                {
+                    username: 'RoanVanStaveren',
+                    score: '12'
+                },
+                {
+                    username: 'KevBru',
+                    score: '855'
+                },
+                {
+                    username: 'RoanVanStaveren',
                     score: '420'
-                },
-                {
-                    username: 'loaors',
-                    score: '500'
-                },
-                {
-                    username: 'That boi',
-                    score: '420'
-                },
-                {
-                    username: 'loaors',
-                    score: '500'
-                },
-                {
-                    username: 'That boi',
-                    score: '420'
-                },
-                {
-                    username: 'loaors',
-                    score: '500'
-                },
-                {
-                    username: 'That boi',
-                    score: '420'
-                },
-                {
-                    username: 'loaors',
-                    score: '500'
-                },
-                {
-                    username: 'That boi',
-                    score: '420'
-                },
-                {
-                    username: 'loaors',
-                    score: '500'
                 }
             ],
             isLoading: true,

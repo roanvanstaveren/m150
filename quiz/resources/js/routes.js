@@ -7,6 +7,7 @@ import SignUp from "./components/Auth/SignUp";
 import QuizPlay from "./components/quiz/QuizPlay";
 import Logout from "./components/Auth/Logout";
 import Home from "./components/Home";
+import QuizScores from "./components/MyAccount/QuizScores";
 
 const routes = [
     {
@@ -63,7 +64,12 @@ const routes = [
             props.quizId = +props.quizId;
             return props;
         }
-    }
+    },
+    {
+        path: '/myAccount',
+        name: 'show my account',
+        component: QuizScores
+    },
 ];
 
 export default routes;
